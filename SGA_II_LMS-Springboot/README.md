@@ -1,67 +1,67 @@
 # Library Management System
 
-A Spring Boot CRUD application for managing a library with books and authors.
+A Spring Boot application that performs CRUD operations to manage books and authors in a library.
 
-## Overview
+## Summary
 
-This project is a Spring Boot web application implementing a simple Library Management System. It demonstrates CRUD operations (Create, Read, Update) for two entities - Author and Book - in a one-to-many relationship.
+This project is a web-based Library Management System built using Spring Boot. It showcases basic Create, Read, and Update functionalities for two main entities: Book and Author, which are linked through a one-to-many relationship.
 
-## Features
+## Key Features
 
-- Create, view, and update Authors
-- Create, view, and update Books
-- View books by a specific author
-- Special feature: View books with authors using an inner join query
-- Form validation with error handling
-- Responsive UI using Bootstrap
+- Add, view, and edit author information  
+- Add, view, and edit book details  
+- Browse all books written by a specific author  
+- Special feature: Display a list of books along with their respective authors using an inner join query  
+- Input validation and error handling on forms  
+- A responsive user interface designed with Bootstrap  
 
 ## Technology Stack
 
-- Java 17
-- Spring Boot 2.7.x
-- Spring Data JPA
-- Spring MVC
-- H2 Database (in-memory)
-- JSP for view templates
-- Maven for dependency management
-- Bootstrap 4.5.2 for UI styling
+- Java 17  
+- Spring Boot 2.7.x  
+- Spring Data JPA  
+- Spring MVC  
+- In-memory H2 Database  
+- JSP for rendering views  
+- Maven as the build tool  
+- Bootstrap 4.5.2 for styling the front-end  
 
-## Prerequisites
+## Requirements
 
-- JDK 17 or later
-- Maven 3.6.x or later
-- IDE (IntelliJ IDEA, Eclipse, VS Code, etc.)
+- JDK 17 or newer  
+- Maven 3.6+  
+- Any modern IDE (e.g., IntelliJ IDEA, Eclipse, VS Code)  
 
-## Getting Started
+## How to Get Started
 
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/library-management-system.git
+git clone https://github.com/Shalu-Bhati/library-management-system.git
 cd library-management-system
 ```
 
-### Build and Run
+### Build and Run the Application
 
 ```bash
 mvn clean install
 mvn spring-boot:run
 ```
 
-The application will be available at `http://localhost:8081`
+You can access the app at `http://localhost:8081`.
 
-### Database
+### Accessing the Database
 
-The application uses an in-memory H2 database that is initialized with sample data on startup. You can access the H2 console at:
+The system uses an in-memory H2 database preloaded with sample data. To access the H2 console:
 
 ```
 http://localhost:8081/h2-console
 ```
 
-Connection details:
-- JDBC URL: `jdbc:h2:mem:testdb`
-- Username: `sa`
-- Password: (leave empty)
+Database connection settings:
+- JDBC URL: `jdbc:h2:mem:testdb`  
+- Username: `sa`  
+- Password: *(empty)*  
 
 ## Project Structure
 
@@ -89,39 +89,39 @@ spring-boot-crud-app/
 └── pom.xml
 ```
 
-## Entity Relationship
+## Data Model Relationships
 
-- Author (1) ----< Book (N)
-  - One Author can have multiple Books
-  - Each Book belongs to exactly one Author
+- **Author** has a one-to-many relationship with **Book**
+  - One author can write multiple books
+  - Each book is associated with exactly one author
 
-## Usage
+## How to Use the Application
 
 1. **Home Page**
-   - Navigate to the home page to see options for managing books and authors
+   - Start from the homepage to navigate between book and author management sections
 
-2. **Managing Authors**
-   - View all authors: Click on "View All Authors"
-   - Add a new author: Click on "Add New Author"
-   - Update an author: Click on "Edit" button next to the author
-   - View author details: Click on "View" button next to the author
-   - View author's books: Click on "Books" button next to the author
+2. **Author Management**
+   - View all authors: Click "View All Authors"
+   - Add new author: Click "Add New Author"
+   - Edit existing author: Click "Edit" next to the author
+   - View author profile: Click "View" next to the author
+   - See books by the author: Click "Books" next to the author
 
-3. **Managing Books**
-   - View all books: Click on "View All Books"
-   - Add a new book: Click on "Add New Book"
-   - Update a book: Click on "Edit" button next to the book
-   - View book details: Click on "View" button next to the book
+3. **Book Management**
+   - View all books: Click "View All Books"
+   - Add a new book: Click "Add New Book"
+   - Edit a book: Click "Edit" next to the book
+   - View book details: Click "View" next to the book
 
 4. **Special Feature**
-   - View books with their authors through an inner join: Click on "Books with Authors"
+   - View a combined list of books and their authors using an SQL inner join: Click "Books with Authors"
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is distributed under the MIT License. For more information, see the LICENSE file included in the repository.
 
-## Acknowledgments
+## Credits
 
-- Spring Framework Team
-- Bootstrap Team
-- H2 Database
+- Spring Framework Team  
+- Bootstrap Developers  
+- H2 Database Contributors  
